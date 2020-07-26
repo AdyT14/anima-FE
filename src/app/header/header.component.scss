@@ -1,0 +1,36 @@
+@import "src/styles.scss";
+
+.header {
+  background-color: $menu-background-color;
+}
+
+.header-logo {
+  display: table;
+  height: inherit;
+}
+
+.logo-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  margin: 10px 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo {
+  &-img {
+    margin: 10px;
+    width: 60px;
+  }
+
+  &-ani {
+    @extend .logo-text;
+    color: green;
+  }
+
+  &-ma {
+    @extend .logo-text;
+    color: orange;
+  }
+}
+
