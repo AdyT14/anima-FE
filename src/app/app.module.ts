@@ -6,8 +6,12 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {RouterModule} from '@angular/router';
 import {IconComponent} from './shared/icon/icon.component';
-import { LoginComponent } from './login/login.component';
-import {AppRoutingModule} from './app.routing.module';
+import {LoginComponent} from './login/login.component';
+import {AppRoutingModule} from './app-routing.module';
+import {RegisterComponent} from './register/register.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {RegisterService} from './register/register.service';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,20 @@ import {AppRoutingModule} from './app.routing.module';
     HeaderComponent,
     FooterComponent,
     IconComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    RegisterService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

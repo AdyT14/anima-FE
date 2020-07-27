@@ -1,0 +1,40 @@
+.btn {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 auto;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  outline: 0;
+  text-decoration: none;
+
+  &-primary{
+    background: $primary;
+    border: 1px solid $primary;
+    color: $primary-text-color;
+  }
+  &-primary:hover{
+    background: darken($primary, 10);
+  }
+
+  &-primary:focus {
+    box-shadow: 0 0 0 0.1rem lighten($primary, 20);
+  }
+
+  &-link{
+    background: none;
+    border: none;
+    color: $link-text-color;
+  }
+  &-link:hover{
+    background: lighten($bg-color, 10);
+  }
+
+  &-link:focus {
+    box-shadow: 0 0 0 0.1rem lighten($primary, 10);
+  }
+
+}
