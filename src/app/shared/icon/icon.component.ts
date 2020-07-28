@@ -4,8 +4,7 @@ import {iconsSvg} from './icons-svg';
 @Component({
   selector: 'app-icon',
   template: '',
-  styleUrls: ['./icon.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['./icon.component.css']
 })
 export class IconComponent implements OnInit{
 

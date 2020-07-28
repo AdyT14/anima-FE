@@ -8,6 +8,8 @@ $primary: $highlight-color;
 
 $link-text-color: #96df96;
 
+$err-text-color: #bf4732;
+
 @import "src/styles/layout/grid";
 @import "src/styles/layout/flex";
 @import "src/styles/layout/margins";

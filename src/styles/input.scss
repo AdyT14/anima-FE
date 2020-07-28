@@ -6,13 +6,13 @@ $width: 100%;
 
 // FORM // ============================== //
 form {
-  width: $width;
+  width: 100%;
   margin: 45px auto;
 }
 
 .group {
   position: relative;
-  margin: 45px 0;
+  margin: 65px 0 10px 0;
 }
 
 // INPUTS // ============================== //
@@ -40,7 +40,6 @@ textarea {
   &:valid ~ label {
     top: -14px;
     font-size: 12px;
-    color: $hl-color;
   }
 
   &:focus ~ .bar:before {
@@ -53,7 +52,7 @@ input[type="password"] {
 }
 
 label {
-  color: $primary-text-color;
+  color: $hl-color;
   font-size: 16px;
   font-weight: normal;
   position: absolute;

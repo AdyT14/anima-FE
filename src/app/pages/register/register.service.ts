@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {NewUser, RegistrationStatus} from '../shared/users/users.model';
+import {RegistrationStatus, User} from '../../shared/users/users.model';
 import {Observable, of} from 'rxjs';
 import {catchError, map} from 'rxjs/operators';
 
@@ -10,7 +10,7 @@ export class RegisterService {
   constructor(private httpClient: HttpClient) {
   }
 
-  registerUser(user: NewUser): Observable<RegistrationStatus> {
+  registerUser(user: User): Observable<RegistrationStatus> {
     return this.httpClient.post('/api/users/signup', user)
       .pipe(
         map(() => registrationStatus.successful),

@@ -1,7 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {LoginComponent} from './login/login.component';
-import {RegisterComponent} from './register/register.component';
+import {LoginComponent} from './pages/login/login.component';
+import {RegisterComponent} from './pages/register/register.component';
+import {DashboardComponent} from './pages/dashboard/dashboard.component';
+import {NotAuthenticatedGuard} from './services/security/not-authenticated.guard';
+import {AuthenticatedGuard} from './services/security/authenticated.guard';
 
 const routes: Routes = [
   {
@@ -11,11 +14,18 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [NotAuthenticatedGuard]
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
+    canActivate: [NotAuthenticatedGuard]
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthenticatedGuard]
   }
 ];
 

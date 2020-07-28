@@ -1,0 +1,17 @@
+@import "src/styles";
+
+::ng-deep form .ng-invalid.ng-touched label {
+  color: $err-text-color;
+}
+
+::ng-deep form .ng-invalid.ng-touched input {
+  border-bottom: 1px solid $err-text-color;
+}
+
+::ng-deep form .ng-valid.ng-touched label {
+  color: $muted-color;
+}
+
+::ng-deep form .ng-valid input {
+  border-bottom: 1px solid $muted-color;
+}

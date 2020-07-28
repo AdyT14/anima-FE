@@ -1,4 +1,4 @@
-@import "src/styles.scss";
+@import "src/styles";
 
 .header {
   background-color: $menu-background-color;
@@ -6,8 +6,9 @@
 
 .header-logo {
   display: table;
-  height: inherit;
+  height: 50px;
   text-decoration: none;
+  margin-left: 20px;
 }
 
 .logo-text {
