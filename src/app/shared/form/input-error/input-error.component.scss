@@ -1,0 +1,13 @@
+@import "src/styles.scss";
+
+:host {
+  color: $err-text-color;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+}
+
+.error_position {
+  font-size: 75%;
+  transform: translateX(0%);
+}

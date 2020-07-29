@@ -1,0 +1,24 @@
+@import "src/styles";
+
+.registration {
+
+  margin-top: 10px;
+  text-align: center;
+
+  &-successful {
+    @extend .registration;
+    color: #109e1c;
+  }
+
+  &-failed {
+    @extend .registration;
+    color: #9c2510;
+  }
+
+}
+
+.register_return-home {
+  text-align: center;
+  margin-top: 20px;
+  color: $primary-text-color;
+}

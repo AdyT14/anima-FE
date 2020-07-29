@@ -1,0 +1,36 @@
+@import "clearfix";
+
+$menu-background-color: #094054;
+$highlight-color: #5f9ab0;
+$bg-color: #102830;
+$primary-text-color: mix(white, $bg-color, 85%);
+$primary: $highlight-color;
+
+$link-text-color: #96df96;
+
+$err-text-color: #bf4732;
+
+@import "src/styles/layout/grid";
+@import "src/styles/layout/flex";
+@import "src/styles/layout/margins";
+@import "src/styles/typography/text-links";
+@import "src/styles/input";
+@import "src/styles/components/card";
+@import "src/styles/components/button";
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-color;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: $primary-text-color;
+}
+
+
