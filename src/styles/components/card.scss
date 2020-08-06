@@ -8,7 +8,7 @@
 
   &-small {
     @extend .card;
-    width: 40vh;
+    width: 40%;
   }
 
   &-inner {
@@ -19,6 +19,16 @@
       text-align: center;
     }
 
+    h2 {
+      padding-top: 10px;
+      text-align: left;
+    }
+
+  }
+
+  &-full {
+    @extend .card;
+    width: 80%;
   }
 
 }

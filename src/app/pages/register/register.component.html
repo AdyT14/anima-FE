@@ -1,65 +1,67 @@
-<div class="card-small">
+<div class="viewport_100 flex-row flex-row-center">
+  <div class="card-small">
 
-  <div class="card-inner">
+    <div class="card-inner">
 
-    <h1>Registration</h1>
+      <h1>Registration</h1>
 
-    <form class="form" [formGroup]="signupForm" (submit)="register()">
+      <form class="form" [formGroup]="signupForm" (submit)="register()">
 
-      <app-input [label]="'Email'" [type]="'text'" formControlName="email">
-      </app-input>
-      <app-input-error
-        *ngIf="signupForm.get('email').touched &&
+        <app-input [label]="'Email'" [type]="'text'" formControlName="email">
+        </app-input>
+        <app-input-error
+          *ngIf="signupForm.get('email').touched &&
          signupForm.get('email').errors &&
          signupForm.get('email').errors.required"
-        [message]="'Email is mandatory'"></app-input-error>
-      <app-input-error
-        *ngIf="signupForm.get('email').touched &&
+          [message]="'Email is mandatory'"></app-input-error>
+        <app-input-error
+          *ngIf="signupForm.get('email').touched &&
          signupForm.get('email').errors &&
          signupForm.get('email').errors.email"
-        [message]="'Not valid email format'"></app-input-error>
+          [message]="'Not valid email format'"></app-input-error>
 
-      <app-input [label]="'Name'" [type]="'text'" formControlName="name">
-      </app-input>
-      <app-input-error
-        *ngIf="signupForm.get('name').touched &&
+        <app-input [label]="'Name'" [type]="'text'" formControlName="name">
+        </app-input>
+        <app-input-error
+          *ngIf="signupForm.get('name').touched &&
          signupForm.get('name').errors &&
          signupForm.get('name').errors.required"
-        [message]="'Name is mandatory'"></app-input-error>
+          [message]="'Name is mandatory'"></app-input-error>
 
-      <app-input [label]="'Password'" [type]="'password'" formControlName="password">
-      </app-input>
-      <app-input-error
-        *ngIf="signupForm.get('password').touched &&
+        <app-input [label]="'Password'" [type]="'password'" formControlName="password">
+        </app-input>
+        <app-input-error
+          *ngIf="signupForm.get('password').touched &&
          signupForm.get('password').errors &&
          signupForm.get('password').errors.required"
-        [message]="'Password is mandatory'"></app-input-error>
-      <app-input-error
-        *ngIf="signupForm.get('password').touched &&
+          [message]="'Password is mandatory'"></app-input-error>
+        <app-input-error
+          *ngIf="signupForm.get('password').touched &&
          signupForm.get('password').errors &&
          signupForm.get('password').errors.notValidPassword"
-        [message]="'Please use at least 8 characters, one number and one letter'">
-      </app-input-error>
+          [message]="'Please use at least 8 characters, one number and one letter'">
+        </app-input-error>
 
-      <div class="submit-button">
-        <button class="btn btn-primary" type="submit">Register</button>
-      </div>
+        <div class="submit-button">
+          <button class="btn btn-primary" type="submit">Register</button>
+        </div>
 
-      <div class="register_return-home" *ngIf="!submitted">
-        Already have an account?
-        <a class="btn btn-link" [routerLink]="'/login'">Login</a>
-      </div>
-    </form>
+        <div class="register_return-home" *ngIf="!submitted">
+          Already have an account?
+          <a class="btn btn-link" [routerLink]="'/login'">Login</a>
+        </div>
+      </form>
 
-    <div *ngIf="submitted"
-         [ngClass]="registrationStatus.result ? 'registration-successful' : 'registration-failed'">
-      {{registrationStatus.message}}
+      <div *ngIf="submitted"
+           [ngClass]="registrationStatus.result ? 'registration-successful' : 'registration-failed'">
+        {{registrationStatus.message}}
 
-      <div class="mt-1">
-        <a class="btn btn-link" *ngIf="registrationStatus.result" [routerLink]="'/login'">Login</a>
+        <div class="mt-1">
+          <a class="btn btn-link" *ngIf="registrationStatus.result" [routerLink]="'/login'">Login</a>
+        </div>
+
       </div>
 
     </div>
-
   </div>
 </div>

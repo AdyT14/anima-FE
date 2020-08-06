@@ -1,9 +1,18 @@
-.grid_2 {
+.grid_3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.grid_4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.grid_3 {
+.grid_5 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.viewport_100{
+  width: 100vw;
 }

@@ -13,12 +13,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {RegisterService} from './pages/register/register.service';
 import {LoginService} from './pages/login/login.service';
-import {DashboardComponent} from './pages/dashboard/dashboard.component';
 import {HttpInterceptorService} from './services/security/http-interceptor.service';
 import {AuthenticatedGuard} from './services/security/authenticated.guard';
 import {NotAuthenticatedGuard} from './services/security/not-authenticated.guard';
-import { InputComponent } from './shared/form/input/input.component';
-import { InputErrorComponent } from './shared/form/input-error/input-error.component';
+import {InputComponent} from './shared/form/input/input.component';
+import {InputErrorComponent} from './shared/form/input-error/input-error.component';
+import {DashboardModule} from './pages/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -28,12 +28,12 @@ import { InputErrorComponent } from './shared/form/input-error/input-error.compo
     IconComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent,
     InputComponent,
     InputErrorComponent,
   ],
   imports: [
     BrowserModule,
+    DashboardModule,
     RouterModule,
     AppRoutingModule,
     FormsModule,
